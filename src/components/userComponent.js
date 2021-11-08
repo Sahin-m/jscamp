@@ -1,10 +1,10 @@
-import {BaseLogger, ElasticLogger, MongoLogger} from "../crossCuttingConcerns/logging/logger.js";
+import { BaseLogger, ElasticLogger, MongoLogger } from "../crossCuttingConcerns/logging/logger.js";
 import User from "../models/user.js";
 import UserService from "../services/userService.js"
 
 console.log("User Component Yüklendi");
 
-let logger1 = new MongoLogger()
+let logger1 = new BaseLogger()
 let userService = new UserService(logger1)
 
 let user1 = new User(1,"engin","demiroğ","Ankara")
